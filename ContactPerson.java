@@ -74,4 +74,8 @@ public class ContactPerson
 	{
 		this.phoneNumber = phoneNumber;
 	}
+	public String toString()
+	{
+		return "Name: "+firstName+" "+lastName+"\tAddress: "+address+"\tcityname: "+city+"\tstatename: "+state+"\tpin code: "+zip+"\tphonenumber: "+phoneNumber+"\n";
+	}
 }
