@@ -17,12 +17,13 @@ public class AddressBook
       int choice = 0;
       AddressBook contact = new AddressBook();
       System.out.println("WELCOME TO ADDRESS BOOK PROGRAM IN ADDRESS BOOK MAIN CLASS ON MASTER BRANCH");
-      while (choice < 4)
+      while (choice < 5)
       {
          System.out.println("1.Add Person ");
          System.out.println("2.Print persons details");
          System.out.println("3.Edit the person details");
-         System.out.println("4.Exit");
+			System.out.println("4.Delete the person details");
+         System.out.println("5.Exit");
          choice = scan.nextInt();
          switch (choice)
          {
@@ -35,7 +36,10 @@ public class AddressBook
             case 3:
                contact.editPersonDetails();
                break;
-         }
+				case 4:
+					contact.deletePerson();
+					break;
+			}
       }
    }
    public void addPerson()
@@ -55,13 +59,9 @@ public class AddressBook
       int zip = scan.nextInt();
       System.out.println("Enter phone number: ");
       int phoneNumber = scan.nextInt();
-<<<<<<< HEAD
 		ContactPerson person1 = new ContactPerson(firstName, lastName, address, city, state, zip, phoneNumber);
-=======
-      ContactPerson person1 = new ContactPerson(firstName, lastName, address, city, state, zip, phoneNumber);
->>>>>>> UC3_EditExistingContact
-      persons.add(person1);
-      System.out.println("person details added successfully");
+		persons.add(person1);
+		System.out.println("person details added successfully");
    }
    public void printPersonDetails()
    {
@@ -129,4 +129,23 @@ public class AddressBook
          }
       }
    }
+	public void deletePerson()
+	{
+		if(persons.isEmpty())
+		{
+			System.out.println("There are no persons to delete in the addressbook");
+		}
+		else
+		{
+			System.out.println("Enter firstname to delete the person");
+			String firstName = scan.nextLine();
+			for(int count=0;count<persons.size();count++)
+			{
+				if(persons.get(count).getFirstName().equals(firstName))
+				{
+					persons.remove(persons.get(count));
+				}
+			}
+		}
+	}
 }
