@@ -76,6 +76,6 @@ public class ContactPerson
 	}
 	public String toString()
 	{
-		return "Name: "+firstName+" "+lastName+"\tAddress: "+address+"\tcityname: "+city+"\tstatename: "+state+"\tpin code: "+zip+"\tphonenumber: "+phoneNumber+"\n";
+		return "Name:"+ firstName+" "+lastName+"\tAddress: "+address+"\tcityname: "+city+"\tstatename: "+state+"\tpin code: "+zip+"\tphonenumber: "+phoneNumber+"\n";
 	}
 }
