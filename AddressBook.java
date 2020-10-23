@@ -55,7 +55,11 @@ public class AddressBook
       int zip = scan.nextInt();
       System.out.println("Enter phone number: ");
       int phoneNumber = scan.nextInt();
+<<<<<<< HEAD
 		ContactPerson person1 = new ContactPerson(firstName, lastName, address, city, state, zip, phoneNumber);
+=======
+      ContactPerson person1 = new ContactPerson(firstName, lastName, address, city, state, zip, phoneNumber);
+>>>>>>> UC3_EditExistingContact
       persons.add(person1);
       System.out.println("person details added successfully");
    }
